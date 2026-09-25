@@ -12,7 +12,7 @@
             font-family: Arial, sans-serif;
         }
         body {
-            background-color: #f4f6f9;
+            background-color: #95fb93;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -40,7 +40,7 @@
             display: block;
             font-size: 14px;
             font-weight: bold;
-            color: #4a5568;
+            color: #68564a;
             margin-bottom: 8px;
         }
         input {
@@ -49,17 +49,17 @@
             border: 1px solid #cbd5e1;
             border-radius: 6px;
             font-size: 16px;
-            color: #334155;
+            color: #515533;
             outline: none;
         }
         input::placeholder {
-            color: #94a3b8;
+            color: #b8b694;
         }
         .section-title {
             text-align: center;
             font-size: 14px;
             font-weight: bold;
-            color: #4a5568;
+            color: #68644a;
             margin: 20px 0 15px 0;
         }
         .grid-pagamentos {
@@ -81,20 +81,20 @@
         .btn-pagamento:hover {
             opacity: 0.9;
         }
-        .btn-pix { background-color: #0ca694; }
+        .btn-pix { background-color: #74e376; }
         .btn-dinheiro { background-color: #2e9d42; }
-        .btn-cartao { background-color: #0073ff; }
-        .btn-parcelado { background-color: #64748b; }
+        .btn-cartao { background-color: #004f15; }
+        .btn-parcelado { background-color: #6b8b64; }
         
         .resultado-box {
             background-color: #f8fafc;
-            border-left: 4px solid #0073ff;
+            border-left: 4px solid #ff0000;
             padding: 15px;
             border-radius: 0 6px 6px 0;
         }
         .resultado-box p {
             font-size: 15px;
-            color: #334155;
+            color: #bf00ff;
             margin-bottom: 6px;
         }
         .resultado-box p strong {
@@ -137,12 +137,10 @@
         function calcularTotal(nomeForma, modificador) {
             const precoProduto = parseFloat(document.getElementById('preco-produto').value) || 0;
             const valorFrete = parseFloat(document.getElementById('valor-frete').value) || 0;
-
-            // O desconto ou acréscimo geralmente se aplica sobre o valor do produto
+         
             const valorProdutoModificado = precoProduto * modificador;
             const totalGeral = valorProdutoModificado + valorFrete;
 
-            // Atualiza a tela
             document.getElementById('txt-forma').innerText = `Forma: ${nomeForma}`;
             document.getElementById('txt-total').innerText = totalGeral.toFixed(2);
         }
